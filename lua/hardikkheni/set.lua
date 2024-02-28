@@ -9,7 +9,9 @@ vim.g.maplocalleader = ' '
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 2
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -39,11 +41,9 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
-
 -- NOTE: set the default tabspace and indent
--- vim.opt.tabstop = 4
--- vim.opt.shiftwidth = 4
--- vim.opt.softtabstop = 4
--- vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true

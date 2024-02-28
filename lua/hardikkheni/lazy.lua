@@ -20,6 +20,10 @@ require("lazy").setup({
     priority = 1000,
     config = function ()
       vim.o.background = "dark"
+      vim.o.termguicolors = true
+      require("gruvbox").setup({
+        contrast = "hard"
+      })
       vim.cmd([[colorscheme gruvbox]])
     end,
   },
