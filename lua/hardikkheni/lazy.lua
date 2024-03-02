@@ -38,10 +38,16 @@ require("lazy").setup({
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
+    -- opts = {
+    --   inlay_hints = {
+    --     enabled = true,
+    --   }
+    -- },
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -216,5 +222,13 @@ require("lazy").setup({
     build = ':TSUpdate',
   },
 
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+    config = function()
+      require("typescript-tools").setup {}
+    end,
+  },
 
 }, {})
